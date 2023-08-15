@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' node src/index.js"
+    "start": "npx nodemon index.js"
   },
   "keywords": [],
   "author": "",
