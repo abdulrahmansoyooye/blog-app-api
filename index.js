@@ -24,6 +24,6 @@ app.use("/post", postRoutes);
 // Connect Database
 connectToDatabase();
 // Spin up server
-app.listen(3001, () => {
+app.listen(3001 || process.env.PORT, () => {
   console.log("SERVER IS WORKING");
 });
