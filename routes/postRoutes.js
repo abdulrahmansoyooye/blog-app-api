@@ -1,9 +1,14 @@
-import express from "express";
-import { PostModel } from "../models/Posts.js";
-import jwt from "jsonwebtoken";
-import multer from "multer";
+const express = require("express");
+
+const PostModel = require("../models/Posts.js");
+// import { PostModel } from "../models/Posts.js";
+const jwt = require("jsonwebtoken");
+// import jwt from "jsonwebtoken";
+const multer = require("multer");
+// import multer from "multer";
 const router = express.Router();
-import fs from "fs";
+const fs = require("fs");
+// import fs from "fs";
 // Set up storage for uploaded images
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -49,5 +54,5 @@ router.get("/:id", async (req, res) => {
 
   res.send(post);
 });
-
-export default router;
+module.exports = router;
+// export default router;

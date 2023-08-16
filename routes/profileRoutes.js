@@ -1,9 +1,13 @@
-import express from "express";
-import cookieParser from "cookie-parser";
+const express = require("express");
+
+// import express from "express";
+const cookieParser = require("cookie-parser");
+// import cookieParser from "cookie-parser";
 const router = express.Router();
-import jwt from "jsonwebtoken";
+const jwt = require("jsonwebtoken");
+// import jwt from "jsonwebtoken";
 router.get("/", verifyToken);
-export async function verifyToken(req, res) {
+async function verifyToken(req, res) {
   const token = req.headers.authorization;
 
   if (!token) {
@@ -18,4 +22,5 @@ export async function verifyToken(req, res) {
     res.status(403).json({ message: "Invalid token" });
   }
 }
-export default router;
+module.exports = router;
+// export default router;

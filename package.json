@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "npx nodemon index.mjs"
+    "start": "npx nodemon index.js"
   },
   "keywords": [],
   "author": "",
